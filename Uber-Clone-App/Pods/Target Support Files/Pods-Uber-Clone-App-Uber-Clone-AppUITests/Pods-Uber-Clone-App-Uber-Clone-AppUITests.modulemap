@@ -1,0 +1,6 @@
+framework module Pods_Uber_Clone_App_Uber_Clone_AppUITests {
+  umbrella header "Pods-Uber-Clone-App-Uber-Clone-AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

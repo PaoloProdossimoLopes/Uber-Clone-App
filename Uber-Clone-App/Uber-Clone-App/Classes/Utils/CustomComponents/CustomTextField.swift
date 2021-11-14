@@ -78,7 +78,7 @@ final class CustomTextField: UIView {
     
     //MARK: - Helpers
     
-    func configureUI() {
+    private func configureUI() {
         configureViewHierarchy()
         configureContraints()
         
@@ -100,6 +100,11 @@ final class CustomTextField: UIView {
         
         self.configureContstaints(bottom: mainStackView.bottomAnchor)
         customTextField.delegate = self
+    }
+    
+    func getText() -> String? {
+        guard let text = customTextField.text, text != "" else { return nil }
+        return text
     }
     
     //MARK: - Selectors

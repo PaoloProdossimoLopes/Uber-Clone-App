@@ -26,4 +26,21 @@ extension UIButton {
         return button
     }
     
+    static func configureMenuHanburgerButton() -> UIButton {
+        let button = UIButton(type: .system)
+        
+        let image = UIImage(systemName: "text.justify")?
+                        .withTintColor(.black, renderingMode: .alwaysOriginal)
+
+        button.setImage(image, for: .normal)
+        button.setPreferredSymbolConfiguration(UIImage.SymbolConfiguration(pointSize: 30), forImageIn: .normal)
+        return button
+    }
+    
+    static func configureCloseButton(_ color: UIColor = .black) -> UIButton {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "xmark")?.withTintColor(color, renderingMode: .alwaysOriginal), for: .normal)
+        return button
+    }
+    
 }

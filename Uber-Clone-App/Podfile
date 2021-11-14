@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Uber-Clone-App' do
+  use_frameworks!
+  pod 'FirebaseAuth'
+  pod 'Firebase/Database'
+#  pod 'FirebaseCore'
+  pod 'GeoFire', '~> 4.1.0'
+
+  target 'Uber-Clone-AppTests' do
+    inherit! :search_paths
+
+  end
+
+  target 'Uber-Clone-AppUITests' do
+  end
+
+end

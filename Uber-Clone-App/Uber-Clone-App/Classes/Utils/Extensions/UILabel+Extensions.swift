@@ -19,8 +19,26 @@ extension UILabel {
         view.addSubview(label)
         
         label.configureContstaints(top: view.safeAreaLayoutGuide.topAnchor,
-                                        centerX: view.centerXAnchor, paddingTop: 30)
+                                   centerX: view.centerXAnchor, paddingTop: 30)
         
+        return label
+    }
+    
+    static func makeMyMarkDeveloper() -> UILabel {
+        let label = UILabel()
+        label.text = "Developped by Paolo"
+        label.font = .systemFont(ofSize: 14)
+        label.textAlignment = .center
+        label.textColor = .white
+        return label
+    }
+    
+    static func configureUserNameLabel() -> UILabel {
+        let label = UILabel()
+        label.text = "Paolo Prodossimo Lopes"
+        label.font = .systemFont(ofSize: 16)
+        label.textColor = .lightGray
+        label.textAlignment = .center
         return label
     }
 
