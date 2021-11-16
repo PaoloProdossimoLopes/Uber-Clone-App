@@ -19,16 +19,8 @@ final class LocationInpuActivationView: UIView {
     
     private lazy var indicatorView: UIView = {
         let view = UIView()
-        
-        let secondView = UIView()
-        secondView.backgroundColor = .black
-        view.addSubview(secondView)
-        secondView.translatesAutoresizingMaskIntoConstraints = false
-        secondView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        secondView.heightAnchor.constraint(equalToConstant: 6).isActive = true
-        secondView.widthAnchor.constraint(equalToConstant: 6).isActive = true
-        
-        view.backgroundColor = .clear
+        view.configureSize(height: 6, width: 6)
+        view.backgroundColor = .black
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -61,10 +53,7 @@ final class LocationInpuActivationView: UIView {
         self.alpha = 0
         backgroundColor = .white
         
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.8
-        layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        layer.masksToBounds = false
+        self.addShadow()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(startToLookingFor))
         addGestureRecognizer(tap)
@@ -82,9 +71,11 @@ final class LocationInpuActivationView: UIView {
     private func configureConstraints() {
         containerView.configureContstaints(top: topAnchor, leading: leadingAnchor,
                                            trailing: trailingAnchor, bottom: bottomAnchor)
+        
         indicatorView.configureContstaints(leading: containerView.leadingAnchor,
                                            centerY: containerView.centerYAnchor,
                                            paddingLeading: 30, height: 6, width: 6)
+        
         placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
         placeholderLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -80).isActive = true
         placeholderLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true

@@ -32,11 +32,13 @@ final class Orchestrador: OrchestradorInheritanceTA {
     
     private func goToSignIn() {
         let nav = UberRouter.routeToSingInNav()
+        DEBUGMessage("Go to Sign in")
         present(nav, animated: true, completion: nil)
     }
     
     private func goToHome() {
         let vc = UberRouter.routeToHomeMapVC()
+        DEBUGMessage("Go to Home")
         present(vc, animated: true, completion: nil)
     }
     

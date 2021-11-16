@@ -30,7 +30,7 @@ extension UIButton {
         let button = UIButton(type: .system)
         
         let image = UIImage(systemName: "text.justify")?
-                        .withTintColor(.black, renderingMode: .alwaysOriginal)
+                        .withTintColor(.white, renderingMode: .alwaysOriginal)
 
         button.setImage(image, for: .normal)
         button.setPreferredSymbolConfiguration(UIImage.SymbolConfiguration(pointSize: 30), forImageIn: .normal)

@@ -41,10 +41,4 @@ enum UberRouter {
         return vc
     }
     
-    static func routeToLocationInputViewController() -> UINavigationController {
-        let vc = LocationInputViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        return nav
-    }
 }

@@ -18,7 +18,7 @@ final class SingInViewModel: SingInViewModelProtocol {
     func signIn(email: String?, password: String?, completion: @escaping ()->()) {
         guard let email = email, let password = password,
         email.validateEmail() else { return }
-        print("Is valid")
+        DEBUGMessage("Is valid")
         auth?.signIn(email: email, password: password, completion: { completion() })
     }
     

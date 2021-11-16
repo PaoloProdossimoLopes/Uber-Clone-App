@@ -24,9 +24,9 @@
 		B163BD25273BDC7000C985B7 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BD24273BDC7000C985B7 /* LocationService.swift */; };
 		B163BD27273CA95F00C985B7 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BD26273CA95F00C985B7 /* String+Extension.swift */; };
 		B163BD29273DCAD100C985B7 /* LocationInpuActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BD28273DCAD100C985B7 /* LocationInpuActivationView.swift */; };
-		B163BD2C273DD96900C985B7 /* LocationInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BD2B273DD96900C985B7 /* LocationInputViewController.swift */; };
-		B163BD2E273FDEEA00C985B7 /* SquaresViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BD2D273FDEEA00C985B7 /* SquaresViews.swift */; };
-		B163BD302740274200C985B7 /* InputLocationViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BD2F2740274200C985B7 /* InputLocationViewHeader.swift */; };
+		B163BD2C273DD96900C985B7 /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BD2B273DD96900C985B7 /* LocationInputView.swift */; };
+		B163BD322742712D00C985B7 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BD312742712D00C985B7 /* GlobalFunctions.swift */; };
+		B163BD352742895300C985B7 /* UITextFIeld+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BD342742895300C985B7 /* UITextFIeld+Extension.swift */; };
 		B1789CBF273800EC00F0A082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1789CBE273800EC00F0A082 /* AppDelegate.swift */; };
 		B1789CC1273800EC00F0A082 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1789CC0273800EC00F0A082 /* SceneDelegate.swift */; };
 		B1789CC8273800EE00F0A082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1789CC7273800EE00F0A082 /* Assets.xcassets */; };
@@ -84,9 +84,9 @@
 		B163BD24273BDC7000C985B7 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B163BD26273CA95F00C985B7 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B163BD28273DCAD100C985B7 /* LocationInpuActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInpuActivationView.swift; sourceTree = "<group>"; };
-		B163BD2B273DD96900C985B7 /* LocationInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputViewController.swift; sourceTree = "<group>"; };
-		B163BD2D273FDEEA00C985B7 /* SquaresViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresViews.swift; sourceTree = "<group>"; };
-		B163BD2F2740274200C985B7 /* InputLocationViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLocationViewHeader.swift; sourceTree = "<group>"; };
+		B163BD2B273DD96900C985B7 /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
+		B163BD312742712D00C985B7 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		B163BD342742895300C985B7 /* UITextFIeld+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextFIeld+Extension.swift"; sourceTree = "<group>"; };
 		B1789CBB273800EC00F0A082 /* Uber-Clone-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uber-Clone-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1789CBE273800EC00F0A082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1789CC0273800EC00F0A082 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,9 +172,26 @@
 		B163BD2A273DD94E00C985B7 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				B163BD2B273DD96900C985B7 /* LocationInputView.swift */,
 				B163BD28273DCAD100C985B7 /* LocationInpuActivationView.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		B163BD332742730D00C985B7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B163BD1F273B568C00C985B7 /* Auth */,
+				B1367E5F27387AF100D7B539 /* HomeMapViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B163BD362742A8C900C985B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B1789CB2273800EC00F0A082 = {
@@ -250,13 +267,10 @@
 		B1789CF12738011A00F0A082 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B163BD2A273DD94E00C985B7 /* CustomViews */,
+				B163BD362742A8C900C985B7 /* Cells */,
 				B163BD1B273B50CB00C985B7 /* Orchestrador.swift */,
-				B163BD1F273B568C00C985B7 /* Auth */,
-				B1367E5F27387AF100D7B539 /* HomeMapViewController.swift */,
-				B163BD2B273DD96900C985B7 /* LocationInputViewController.swift */,
-				B163BD2F2740274200C985B7 /* InputLocationViewHeader.swift */,
-				B163BD2D273FDEEA00C985B7 /* SquaresViews.swift */,
+				B163BD332742730D00C985B7 /* Controllers */,
+				B163BD2A273DD94E00C985B7 /* CustomViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,6 +299,7 @@
 				B1789CFF273838F700F0A082 /* CustomComponents */,
 				B1789CFA273805B100F0A082 /* Extensions */,
 				B143C12E273AF8530045B686 /* Constants.swift */,
+				B163BD312742712D00C985B7 /* GlobalFunctions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -311,6 +326,7 @@
 				B1367E5B2738792700D7B539 /* UIStackView+Extensions.swift */,
 				B1367E5D273879B000D7B539 /* UISegmentedControl+Extensions.swift */,
 				B163BD26273CA95F00C985B7 /* String+Extension.swift */,
+				B163BD342742895300C985B7 /* UITextFIeld+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -336,6 +352,7 @@
 				B1789CB8273800EC00F0A082 /* Frameworks */,
 				B1789CB9273800EC00F0A082 /* Resources */,
 				96FE01929D1E2C5612FB59D6 /* [CP] Embed Pods Frameworks */,
+				B163BD392743196400C985B7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -534,6 +551,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Uber-Clone-App/Pods-Uber-Clone-App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B163BD392743196400C985B7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n\n";
+		};
 		BEF8879D2FE5B121BD594B18 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -570,14 +604,14 @@
 				B1789D012738391C00F0A082 /* CustomPrimaryUIButton.swift in Sources */,
 				B1789D0527383CA200F0A082 /* SingUpViewController.swift in Sources */,
 				B1789CF72738022200F0A082 /* SignInViewController.swift in Sources */,
+				B163BD322742712D00C985B7 /* GlobalFunctions.swift in Sources */,
 				B163BD25273BDC7000C985B7 /* LocationService.swift in Sources */,
+				B163BD352742895300C985B7 /* UITextFIeld+Extension.swift in Sources */,
 				B1789D072738453600F0A082 /* UIButton+Extensions.swift in Sources */,
 				B163BD1E273B567600C985B7 /* AccountType.swift in Sources */,
 				B143C12D273AE8110045B686 /* AuthService.swift in Sources */,
-				B163BD302740274200C985B7 /* InputLocationViewHeader.swift in Sources */,
 				B1789CF9273805AF00F0A082 /* UIView+Extensions.swift in Sources */,
-				B163BD2E273FDEEA00C985B7 /* SquaresViews.swift in Sources */,
-				B163BD2C273DD96900C985B7 /* LocationInputViewController.swift in Sources */,
+				B163BD2C273DD96900C985B7 /* LocationInputView.swift in Sources */,
 				B163BD27273CA95F00C985B7 /* String+Extension.swift in Sources */,
 				B163BD29273DCAD100C985B7 /* LocationInpuActivationView.swift in Sources */,
 				B163BD1C273B50CB00C985B7 /* Orchestrador.swift in Sources */,

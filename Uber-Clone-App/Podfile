@@ -10,7 +10,6 @@ target 'Uber-Clone-App' do
 
   target 'Uber-Clone-AppTests' do
     inherit! :search_paths
-
   end
 
   target 'Uber-Clone-AppUITests' do
